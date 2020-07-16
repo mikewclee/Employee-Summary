@@ -14,7 +14,7 @@ const team = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-function employeeInformation() {
+employeeInformation = () => {
     inquirer.prompt([
         {
             type: "list",
@@ -24,7 +24,7 @@ function employeeInformation() {
                 "Manager",
                 "Engineer",
                 "Intern",
-                "Show Summary"
+                "Team Completed"
             ]
         },
     ]).then(response => {
@@ -34,13 +34,13 @@ function employeeInformation() {
             engineerInformation();
         } else if (response.name === "Intern") {
             internInformation();
-        } else if (response.name === "Show Summary") {
+        } else if (response.name === "Team Completed") {
             generateHTML(outputPath, render(team));
         };
     });
 };
 
-function managerInformation() {
+managerInformation = () => {
     return inquirer.prompt([
         {
             type: "input",
@@ -70,7 +70,7 @@ function managerInformation() {
     })
 };
 
-function engineerInformation() {
+engineerInformation= () => {
     return inquirer.prompt([
         {
             type: "input",
@@ -95,12 +95,12 @@ function engineerInformation() {
     ]).then(function (answer) {
         let engineer = new Engineer(answer.name, answer.id, answer.email, answer.GitHub)
         team.push(engineer);
-        console.log(`Engineer is : ${engineer}`);
+
         employeeInformation()
     })
 };
 
-function internInformation() {
+internInformation= () => {
     return inquirer.prompt([
         {
             type: "input",
@@ -125,11 +125,19 @@ function internInformation() {
     ]).then(function (answer) {
         let intern = new Intern(answer.name, answer.id, answer.email, answer.school)
         team.push(intern);
-        console.log(`intern is : ${intern}`);
+
         employeeInformation()
     })
 };
 
 //file generateHTML(outputPath, render(team));
+generateHTML = (fileName, data) => {
+    fs.writeFile(fileName, data, "utf8", function (err) {
+        if (err) {
+            throw err;
+        }
+        console.log("Successfully assembled Employee Team");
+    });
+};
 
 employeeInformation();
