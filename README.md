@@ -1,13 +1,15 @@
 
   # Employee-Summary
 
-  ![Badge](https://img.shields.io/badge/project-Employee-Summary-green)
+  ![Badge](https://img.shields.io/badge/project-Employee--Summary-green) 
   ![Badge](https://img.shields.io/badge/Installation-fs_inquirer_path-blue) 
 
   ## Description
-  This is a command line application that generates a webpage of the software team member's info. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. When the user has completed building the team, the application will create an HTML file that displays the team roster based on the information provided by the user.
+  This is a command line application that generates a webpage of info for the software team member. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. When the user has completed building the team, the application will create an HTML file that displays the team roster based on the information provided by the user.
 
-  ![Image Alt Text](/assets/video.gif)
+  Watch online video: https://drive.google.com/file/d/1yKkk3xoYBOFj8YSa1Qti30SgmLvEX2KV/view
+
+  ![AppScreenshot](Assets/MyTeam.JPG)
 
   ## Table of Contents
   - [Installation](#installation)
@@ -44,4 +46,3 @@ GitHub Username: https://github.com/mikewclee
 GitHub Project link: https://github.com/mikewclee/Employee-Summary
   
 Contact email: mikewclee@gmail.com
-  

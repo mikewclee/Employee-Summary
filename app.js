@@ -93,7 +93,7 @@ engineerInformation= () => {
             name: "github"
         }
     ]).then(function (answer) {
-        let engineer = new Engineer(answer.name, answer.id, answer.email, answer.GitHub)
+        let engineer = new Engineer(answer.name, answer.id, answer.email, answer.github)
         team.push(engineer);
 
         employeeInformation()
@@ -136,7 +136,7 @@ generateHTML = (fileName, data) => {
         if (err) {
             throw err;
         }
-        console.log("Successfully assembled Employee Team");
+        console.log("Successfully assembled My Team");
     });
 };
 
